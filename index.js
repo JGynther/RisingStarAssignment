@@ -7,7 +7,12 @@ import { convertParamToDateString } from "./lib/dateutils.js";
 const app = express();
 const PORT = process.env.PORT || 8000;
 
-app.get("/", (req, res) => res.send("Hello Vincit!"));
+app.get("/", (req, res) =>
+  res.send(
+    `<h1>Hello <h style='text-decoration:line-through'>World</h> Vincit!</h1>
+    <p><a href='https://github.com/JGynther/RisingStarAssignment/blob/main/README.md' target='_blank' rel='noreferrer'>View documentation for usage</a></p>`
+  )
+);
 
 app.get("/downtrend/:startDate-:endDate", async (req, res) => {
   let { startDate, endDate } = req.params;
