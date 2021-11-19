@@ -13,7 +13,6 @@ export default async function getMaxVolume({ startDate, endDate }) {
 
   const [maxVolume, index] = getArrayMax(volumes);
   const date = convertTimestampToDate(data.total_volumes[index][0]);
-  const price = data.prices[index][1];
 
-  return [maxVolume, date, price];
+  return [maxVolume, date];
 }
