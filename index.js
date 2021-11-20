@@ -2,7 +2,7 @@ import express from "express";
 import getDowntrend from "./api/downtrend.js";
 import getMaxVolume from "./api/maxvolume.js";
 import timeMachine from "./api/timemachine.js";
-import { parseParamString, convertParamToDateString } from "./lib/dateutils.js";
+import { convertParamToDateString } from "./lib/dateutils.js";
 
 const app = express();
 const PORT = process.env.PORT || 8000;
